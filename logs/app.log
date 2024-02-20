@@ -1,0 +1,5 @@
+17:16:54.953 [main] DEBUG root.one.Run - Debug message
+17:16:54.955 [main] INFO  root.one.Run - Info message
+17:16:54.955 [main] WARN  root.one.Run - Warning message
+17:16:54.955 [main] ERROR root.one.Run - Error message
+17:16:54.955 [main] FATAL root.one.Run - Fatal message
