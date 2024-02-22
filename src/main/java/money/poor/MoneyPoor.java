@@ -1,16 +1,15 @@
-package root.two;
+package money.poor;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import root.one.Run;
-import root.poor.Poor;
+import run.Run;
 
 public class MoneyPoor implements Runnable {
 
 	private Poor p;
 	
-	private static final Logger logger = LogManager.getLogger(MoneyPoor.class);
+
 
 	public MoneyPoor(Poor p) {
 		this.p = p;
@@ -18,15 +17,14 @@ public class MoneyPoor implements Runnable {
 	
 	@Override
 	public void run() {
+		Logger logger = LogManager.getLogger("poor");
+		
 		logger.info("거지1시작됨");
 		// TODO Auto-generated method stub
 		
 		while(true) {
 			
 			try {
-				
-				
-//				System.out.println("거지1 : " + p.getMoney()+"원을 벌었습니다.");
 				
 				p.increase();
 				Thread.sleep(1000);

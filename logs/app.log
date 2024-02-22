@@ -3,3 +3,8 @@
 17:16:54.955 [main] WARN  root.one.Run - Warning message
 17:16:54.955 [main] ERROR root.one.Run - Error message
 17:16:54.955 [main] FATAL root.one.Run - Fatal message
+17:07:46.155 [Thread-2] INFO  poor.inf.ui.Inf - 거지인터페이스 시작됨
+17:07:46.155 [Thread-1] INFO  root.two.MoneyPoor - 거지1시작됨
+17:07:48.611 [Thread-2] INFO  poor.inf.ui.Inf - 거지1님이 1을 눌렀습니다.
+17:07:49.983 [Thread-2] INFO  poor.inf.ui.Inf - 거지1님이 2를 눌렀습니다.
+17:07:58.616 [Timer-0] INFO  root.poor.Poor - 두배 벌기 스킬이 종료됐습니다.

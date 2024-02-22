@@ -1,4 +1,4 @@
-package root.poor;
+package money.poor;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -6,12 +6,12 @@ import java.util.TimerTask;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import poor.inf.ui.Inf;
+import poor.ui.InterfacePoor;
 
 public class Poor {
 	private int money = 0;
 	private volatile boolean doubleIncrease = false;
-	private static final Logger logger = LogManager.getLogger();
+	private static final Logger logger = LogManager.getLogger("poor");
 	
 	public int getMoney() {
 		return money;

@@ -1,0 +1,49 @@
+<Configuration>
+  <Appenders>
+    <!-- 콘솔에 로그 출력하는 Appender -->
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </Console>
+    
+    <!-- 파일에 로그 출력하는 Appender -->
+    <File name="File" fileName="C:\conf\root.log">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </File>
+
+
+    <!-- run -->
+    <Console name="runConsole" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </Console>
+    <File name="runFile" fileName="C:\conf\run.log">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </File>
+
+    <!-- poor -->
+    <Console name="PoorConsole" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </Console>
+    <File name="PoorFile" fileName="C:\conf\poor.log">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </File>
+
+
+  </Appenders>
+
+  <!-- 로그 레벨 설정 및 Appender 연결 -->
+  <Loggers>
+    <Root level="info">
+      <AppenderRef ref="Console"/>
+      <AppenderRef ref="File"/>
+    </Root>
+    <logger name="run" level="DEBUG">
+	<AppenderRef ref="runConsole"/>
+	<AppenderRef ref="runFile"/>
+    </logger>
+    <logger name="poor" level="DEBUG">
+	<AppenderRef ref="PoorConsole"/>
+	<AppenderRef ref="PoorFile"/>
+    </logger>
+
+  </Loggers>
+</Configuration>

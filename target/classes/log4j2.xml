@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info">
+    <Appenders>
+        <!-- 로그 이벤트를 콘솔에 출력하는 Appender -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+        <!-- 로그 이벤트를 파일에 출력하는 Appender -->
+        <!-- <File name="File" fileName="c:/logs/app.log">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </File> -->
+    </Appenders>
+    <!-- 로그 레벨 설정 -->
+    <Loggers>
+        <!-- 모든 로그 이벤트를 기본적으로 받는 Root Logger -->
+        <Root level="debug">
+            <AppenderRef ref="Console"/>
+			<!-- <AppenderRef ref="File"/> -->
+        </Root>
+    </Loggers>
+</Configuration>
