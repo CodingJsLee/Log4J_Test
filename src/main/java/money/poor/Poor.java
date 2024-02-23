@@ -26,12 +26,8 @@ public class Poor {
     	synchronized (this) {
     		if(!doubleIncrease) {
     			this.setMoney(money + 1);
-//    			System.out.println("money : " + money);
-//    			System.out.println("doubleIncrease : " + doubleIncrease);
     		} else {
     			this.setMoney(money + 5);
-//    			System.out.println("money : " + money);
-//    			System.out.println("doubleIncrease : " + doubleIncrease);
     		}
 		}
     }

@@ -33,25 +33,24 @@ public class InterfacePoor implements Runnable{
 			
 			try {
 				String inputNum = reader.readLine();
-//				System.out.println("입력한 값 : " + inputNum);
 				
 				if("1".equals(inputNum)) {
 					p.doubleIncreaseSwitch(true);
-					logger.info("거지1님이 1을 눌렀습니다.");
+					logger.debug("거지1님이 1을 눌렀습니다.");
 				} else if("2".equals(inputNum)) {
 					System.out.println("번돈 : " + p.getMoney());
 					logger.info("거지1님이 2를 눌렀습니다.");
 				} else if("3".equals(inputNum)) {
 					logger.info("거지1님이 게임을 종료하였습니다.");
 				} else {
-					System.out.println("test");
+					throw new IOException("강제로 발생한 IOException.");
 				}
 				
 				
 				
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
+				logger.error(e);
 			}
 		}
 		
